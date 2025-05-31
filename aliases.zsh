@@ -6,7 +6,7 @@
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ll="eza -T -L=1 -la --icons --git --color=always"
+alias ll="eza -T -L=0 -la --icons --git --color=always"
 alias tree="tree -I 'node_modules'"
 alias vim=nvim
 alias pc=procs
