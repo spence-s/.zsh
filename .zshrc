@@ -8,4 +8,3 @@ source ~/.zsh/aliases.zsh
 
 source ~/.zsh/completions.zsh
 
-source ~/.p10k.zsh
