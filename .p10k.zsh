@@ -973,6 +973,8 @@
   typeset -g POWERLEVEL9K_PYENV_PROMPT_ALWAYS_SHOW=true
   # If set to false, hide python version if it's equal to "system".
   typeset -g POWERLEVEL9K_PYENV_SHOW_SYSTEM=false
+	# Only show the python version when there is a file matching the specified file pattern in the current directory, or its parent directory, or its grandparent directory, and so on.
+	typeset -g POWERLEVEL9K_PYENV_SHOW_ON_UPGLOB='pyproject.toml|requirements.txt|Pipfile|setup.py|setup.cfg|tox.ini'
 
   # Pyenv segment format. The following parameters are available within the expansion.
   #
