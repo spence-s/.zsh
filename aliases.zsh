@@ -10,18 +10,8 @@ alias ll="eza -T -L=1 -la --icons --git --color=always"
 alias tree="tree -I 'node_modules'"
 alias vim=nvim
 alias pc=procs
-# alias find=gfind
-alias mongo=mongosh
 alias ncu="ncu -i"
-alias llb-token=llbToken
-
-llbToken() {
-	echo "\ngcloud auth login --update-adc --verbosity=info\n"
-	gcloud auth login --update-adc --verbosity=info
-	sleep 2
-	export NPM_TOKEN=$(gcloud auth print-access-token)
-	echo "\nSuccessfully updated NPM_TOKEN with gcp access token $NPM_TOKEN"
-}
+alias tx="rsync -avz --exclude=node_modules --exclude=dist --exclude=.history"
 
 # iterm tab title
 # https://gist.github.com/phette23/5270658#gistcomment-3530342
