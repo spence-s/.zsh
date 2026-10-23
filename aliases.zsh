@@ -12,6 +12,15 @@ alias vim=nvim
 alias pc=procs
 alias ncu="ncu -i"
 alias tx="rsync -avz --exclude=node_modules --exclude=dist --exclude=.history"
+alias tf=terraform
+
+# Pull a project from the other computer over SSH into ~/Projects.
+# Use a generic SSH host alias configured in each computer's ~/.ssh/config
+# to keep machine-specific hostnames and usernames out of this shared file.
+txp() {
+	[[ $# -eq 1 ]] || { echo "Usage: txp <project>" >&2; return 1; }
+	tx "sync-peer:~/Projects/$1/" "$HOME/Projects/$1/"
+}
 
 # iterm tab title
 # https://gist.github.com/phette23/5270658#gistcomment-3530342

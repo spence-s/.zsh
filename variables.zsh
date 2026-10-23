@@ -1,5 +1,6 @@
 # brew
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
 
 # n and node and npm
 export PATH=~/.npm-global/bin:$PATH
@@ -19,7 +20,11 @@ export BAT_THEME=Dracula
 export N_PREFIX=$HOME/.local
 
 # brew setup
-export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1 
+export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
 
 # omlx
 export OMLX_PORT=11436
+
+# editor
+export VISUAL="nvim"
+export EDITOR="nvim"
