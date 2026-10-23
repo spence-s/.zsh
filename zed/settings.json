@@ -33,7 +33,7 @@
 	"terminal": {
 		"font_size": 18.0,
 		"font_family": "Dank Mono",
-		"font_fallbacks": ["Symbols Nerd Font", "Symbols Nerd Font Mono"],
+		"font_fallbacks": ["Symbols Nerd Font Mono"],
 	},
 	"base_keymap": "VSCode",
 	"preview_tabs": {

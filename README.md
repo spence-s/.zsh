@@ -13,9 +13,9 @@ ln -s ~/.zsh/.zshrc ~/.zshrc
 rm ~/.p10k.zsh
 ln -s ~/.zsh/.p10k.zsh ~/.p10k.zsh
 
-# zed
-mv ~/.config/zed/settings.json ~/.config/zed/settings.json.backup-$(date +%Y%m%d%H%M%S) &&
-ln -s ~/.zsh/zed/settings.json ~/.config/zed/settings.json
+# zed — run once per computer; preserve the existing directory outside Git
+mv ~/.config/zed ~/.config/zed.backup-$(date +%Y%m%d%H%M%S) &&
+ln -s ~/.zsh/zed ~/.config/zed
 ```
 
 ## Iterm2
@@ -31,3 +31,5 @@ ln -s ~/.zsh/zed/settings.json ~/.config/zed/settings.json
 ## Zed
 
 - Sync zed settings across my devices
+- ignore prompts and device specific things
+- symlinking zed settings may require manual window reloads to get settings to apply
