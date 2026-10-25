@@ -22,6 +22,29 @@ txp() {
 	tx "sync-peer:~/Projects/$1/" "$HOME/Projects/$1/"
 }
 
+# Transfer native Pi sessions without deleting destination-only files.
+# Pull before starting Pi and push after exiting it. The SSH alias is
+# resolved by each machine's SSH config; newer destination files are kept.
+# This does not merge sessions continued independently on both machines.
+pi-sync() {
+  local peer='sync-peer'
+
+  case "${1:-}" in
+    pull)
+      rsync -avzu "${peer}:.pi/agent/sessions/" "${HOME}/.pi/agent/sessions/" \
+        && echo "Pi sessions pulled successfully from ${peer}."
+      ;;
+    push)
+      rsync -avzu "${HOME}/.pi/agent/sessions/" "${peer}:.pi/agent/sessions/" \
+        && echo "Pi sessions pushed successfully to ${peer}."
+      ;;
+    *)
+      printf 'Usage: pi-sync pull|push\n' >&2
+      return 2
+      ;;
+  esac
+}
+
 # iterm tab title
 # https://gist.github.com/phette23/5270658#gistcomment-3530342
 if [ $ITERM_SESSION_ID ]; then
