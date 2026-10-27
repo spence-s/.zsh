@@ -126,7 +126,22 @@
     }
 	},
 	"lsp": {
-		"xo": {
+		"vtsls": {
+   "settings": {
+    "typescript": {
+     "updateImportsOnFileMove": {
+      "enabled": "always"
+     }
+    },
+    "javascript": {
+     "updateImportsOnFileMove": {
+      "enabled": "always"
+     }
+    }
+   },
+   "enable_lsp_tasks": true
+  },
+  "xo": {
 			"binary": {
 				"path": "/Users/spencer/.local/bin/node",
 				"arguments": [
