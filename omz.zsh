@@ -79,7 +79,6 @@ plugins=(
 	docker
 	docker-compose
 	colored-man-pages
-	direnv
 )
 
 source $ZSH/oh-my-zsh.sh
