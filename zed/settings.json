@@ -10,26 +10,23 @@
 	"git_panel": {
 		"group_by": "none",
 		"tree_view": true,
-		"entry_primary_click_action": "file_diff"
-	},
-	"prettier": {
-		"allowed": false
+		"entry_primary_click_action": "file_diff",
 	},
 	"toolbar": {
-		"code_actions": true
+		"agent_review": false,
+		"code_actions": true,
 	},
 	"minimap": {
 		"display_in": "active_editor",
-		"show": "always"
+		"show": "always",
 	},
-	"markdown_preview": {},
 	"git": {
-		"diff_base": "head"
+		"diff_base": "head",
 	},
 	"proxy": "",
 	"disable_ai": true,
 	"session": {
-		"trust_all_worktrees": true
+		"trust_all_worktrees": true,
 	},
 	"terminal": {
 		"font_size": 18.0,
@@ -49,17 +46,9 @@
 	"cursor_shape": "bar",
 	"buffer_font_fallbacks": ["Symbols Nerd Font Mono"],
 	"file_types": {
-		"html": [
-			"*.ejs.t",
-			"*.t"
-		],
-		"javascript": [
-			"*.js"
-		],
-		"env": [
-			".env",
-			".env.*"
-		],
+		"html": ["*.ejs.t", "*.t"],
+		"javascript": ["*.js"],
+		"env": [".env", ".env.*"],
 	},
 	"colorize_brackets": true,
 	"show_whitespaces": "all",
@@ -71,28 +60,33 @@
 	"theme": {
 		"mode": "dark",
 		"light": "One Light",
-		"dark": "Dracula"
+		"dark": "Dracula",
 	},
 	"icon_theme": {
 		"mode": "dark",
 		"light": "Material Icon Theme",
-		"dark": "Catppuccin Macchiato"
+		"dark": "Catppuccin Macchiato",
 	},
 	"agent_servers": {
+		"pi-acp": {
+			"type": "registry",
+		},
 		"github-copilot-cli": {
 			"type": "registry",
 		},
 	},
 	"agent": {
+		"button": false,
 		"threads_sidebar": {
-			"position": "right"
+			"auto_open": false,
+			"position": "right",
 		},
 		"dock": "right",
 		"default_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-5-mini",
+			"provider": "openai-subscribed",
+			"model": "gpt-6.1-sol",
 			"enable_thinking": true,
-			"effort": "high",
+			"effort": "medium",
 		},
 		"favorite_models": [],
 		"model_parameters": [],
@@ -118,42 +112,51 @@
 	"format_on_save": "on",
 	"formatter": {
 		"language_server": {
-			"name": "xo"
-		}
+			"name": "xo",
+		},
 	},
 	"languages": {
-  	"Terraform": {
-      "formatter": "language_server",
-    }
+		"JSON": {
+			"formatter": "prettier",
+		},
+		"JSONC": {
+			"formatter": "prettier",
+		},
+		"Markdown": {
+			"formatter": "prettier",
+		},
+		"Terraform": {
+			"formatter": "language_server",
+		},
 	},
 	"lsp": {
 		"vtsls": {
-   "settings": {
-    "typescript": {
-     "updateImportsOnFileMove": {
-      "enabled": "always"
-     }
-    },
-    "javascript": {
-     "updateImportsOnFileMove": {
-      "enabled": "always"
-     }
-    }
-   },
-   "enable_lsp_tasks": true
-  },
-  "xo": {
+			"settings": {
+				"typescript": {
+					"updateImportsOnFileMove": {
+						"enabled": "always",
+					},
+				},
+				"javascript": {
+					"updateImportsOnFileMove": {
+						"enabled": "always",
+					},
+				},
+			},
+			"enable_lsp_tasks": true,
+		},
+		"xo": {
 			"binary": {
 				"path": "/Users/spencer/.local/bin/node",
 				"arguments": [
 					"/Users/spencer/Projects/xo-language-server/dist/src/cli.js",
-					"--stdio"
-				]
+					"--stdio",
+				],
 			},
 			"settings": {
 				"xo": {
 					"format": {
-						"enable": true
+						"enable": true,
 					},
 				},
 			},
