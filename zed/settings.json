@@ -9,7 +9,8 @@
 {
 	"git_panel": {
 		"group_by": "none",
-		"tree_view": true
+		"tree_view": true,
+		"entry_primary_click_action": "file_diff"
 	},
 	"prettier": {
 		"allowed": false
