@@ -11,8 +11,9 @@ alias tree="tree -I 'node_modules'"
 alias vim=nvim
 alias pc=procs
 alias ncu="ncu -i"
-alias tx="rsync -avz --exclude=node_modules --exclude=dist --exclude=.history"
+alias tx="rsync -avzu --exclude=node_modules --exclude=dist --exclude=.history"
 alias tf=terraform
+alias claude="nono run --profile claude -- claude"
 
 # Pull a project from the other computer over SSH into ~/Projects.
 # Use a generic SSH host alias configured in each computer's ~/.ssh/config
